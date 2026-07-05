@@ -4,13 +4,7 @@ BenchX is a configurable OLTP workload generator for benchmarking geo-distribute
 
 Thanks to its configurability, BenchX covers a significant number of commonly used OLTP workload generators such as TPC-C, YCSB+T, PPS, SmallBank, MovR, DS Movie, and DS Hotels. Namely, with the right configuration, it replicates the effect of each of them. In addition, it reaches regions of the workload design space that none of them cover.
 
-## Example of Analysis
-
-For example, we can use BenchX to analyze the effect of varying both the geo-distribution profile and the operation intensity on the throughput and latency of several databases, including Detock, SLOG, Calvin, Janus, and CockroachDB.
-
-<p align="center"><img src="Example.svg"></p>
-
-## Running BenchX
+## High-level Design
 
 BenchX runs on top of the Gaia geo-distributed evaluation framework. BenchX is configured through a single YAML file that is picked up by the workload generator in each region.
 ```yaml
@@ -26,3 +20,9 @@ BenchX runs on top of the Gaia geo-distributed evaluation framework. BenchX is c
 }
 ```
 <p align="center"><img src="BenchX.svg" width="400"></p>
+
+## Example of Analysis
+
+For example, we can use BenchX to analyze the effect of varying both the geo-distribution profile and the operation intensity on the throughput and latency of several databases, including Detock, SLOG, Calvin, Janus, and CockroachDB.
+
+<p align="center"><img src="Example.svg"></p>
