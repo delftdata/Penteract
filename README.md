@@ -6,7 +6,7 @@ Thanks to its configurability, BenchX covers a significant number of commonly us
 
 ## High-level Design
 
-BenchX runs on top of the Gaia geo-distributed evaluation framework. BenchX is configured through a single YAML file that is picked up by the workload generator in each region.
+BenchX is configured through a single YAML file that is picked up by the workload generator in each region.
 ```yaml
 {
     transaction_mix: "50:25:10:10:5",
