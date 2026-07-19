@@ -1,8 +1,8 @@
 # BenchX
 
-BenchX is a configurable OLTP workload generator for benchmarking geo-distributed databases. It is built on top of the TPC-C schema, and introduces a wide range of knobs to control the transaction mix, operation intensity, geo-distribution profile (i.e., percentage of multi-home, single-home, and foreign single-home), dependent transactions, data skew, and temporal dynamics.
+BenchX is a configurable OLTP workload generator for benchmarking geo-distributed databases. It is built on top of the TPC-C schema and introduces a wide range of knobs to control the transaction mix, key touched per transaction, geo-distribution profile (i.e., percentage of multi-home, single-home, and foreign single-home), dependent transactions, data skew, and temporal dynamics.
 
-Thanks to its configurability, BenchX covers a significant number of commonly used OLTP workload generators including TPC-C, YCSB+T, PPS, SmallBank, MovR, DS Movie, and DS Hotels. Namely, with the right configuration, it replicates the effect of each of them. In addition, it reaches regions of the workload design space that none of them cover.
+Thanks to its configurability, BenchX covers a significant number of commonly used OLTP workload generators, including TPC-C, YCSB, PPS, SmallBank, MovR, DS Movie, and DS Hotels. Namely, with the right configuration, it replicates the effect of each of them. In addition, it reaches regions of the workload design space that none of them cover.
 
 ## High-level Design
 
@@ -11,7 +11,7 @@ The user provides a single YAML configuration file describing the desired worklo
 ```yaml
 {
     transaction_mix: "50:25:10:10:5",
-    intensity: "10:5:10000:2:1",
+    keys: "10:5:10000:2:1",
     mp_percent: "50:50:100:25:50",
     fsh_percent: "33:33:0:20:50",
     mh_percent: "33:0:20:0:50",
