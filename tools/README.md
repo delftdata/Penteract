@@ -47,13 +47,13 @@ The `tools/run_all_systems_on_remote.py` script will handle the spining up and t
 
 For example: `python3 tools/run_all_systems_on_remote.py -i omraz/seq_eval:latest -m st5 -s lat_breakdown -w ycsb -cf examples/ycsb/lat_breakdown -u omraz`
 
-## Running BenchX
+## Running Penteract
 
-BenchX allows you to model virutally any target workload using a single benchmark and a set of tuning knobs. To run the default configuration you can use the command below. The txn mix is: NewOrder:InsertOnly:OrderStatus:DeleteOnly:StockLevel
+Penteract allows you to model virutally any target workload using a single benchmark and a set of tuning knobs. To run the default configuration you can use the command below. The txn mix is: NewOrder:InsertOnly:OrderStatus:DeleteOnly:StockLevel
 
 `python3 tools/admin.py benchmark --image omraz/oltp_survey:detock examples/benchx/tu_cluster_benchx_ddr_ts.conf -u omraz --txns 100000 --seed 1 --clients 3000 --duration 60 --generators 1 -wl benchx --param "mix=92:0:4:0:4" 2>&1 | tee benchmark_cmd.log`
 
-To run a full scenario with BenchX, use the `run_config_on_remote.py` script:
+To run a full scenario with Penteract, use the `run_config_on_remote.py` script:
 
 `python3 tools/run_config_on_remote.py -i omraz/oltp_survey:detock -m st5 -s scalability -w benchx -c examples/benchx/tu_cluster_benchx_ddr_ts.conf -u omraz -db Detock`
 

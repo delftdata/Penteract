@@ -24,10 +24,18 @@ The user provides a single YAML configuration file describing the desired worklo
 
 ## Fidelity of Penteract
 
+To test how accurately Penteract can model existing benchmarks, we investigate the differences in throughput and latency on 4 state-of-the-art OLTP systems below.
 
+<p align="center"><img src="fidelity.svg"></p>
 
 ## Example of Analysis
 
 Because every dimension of Penteract is independently tunable, we can sweep entire regions of the workload space in a single experiment. For example, varying both the geo-distribution profile and the operation intensity reveals how the throughput and latency of Detock, SLOG, Calvin, Janus, and CockroachDB evolve across these dimensions.
 
 <p align="center"><img src="scope_all.svg"></p>
+
+## Running Penteract
+
+To run Penteract, begin by compiling the system following [these instructions](https://github.com/delftdata/Penteract/blob/main/Build.md).
+
+Then you can launch a cluster and run experiements following [these instructions](https://github.com/delftdata/Penteract/blob/main/tools/README.md)
