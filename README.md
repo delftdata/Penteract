@@ -1,6 +1,6 @@
 # Penteract
 
-Penteract is a configurable OLTP workload generator for benchmarking geo-distributed databases. Built on top of the TPC-C schema Penteract introduces a wide range of knobs to control the transaction mix, the number of keys touched per transaction, the geo-distribution profile (i.e., percentage of local single-home, foreign single-home, and multi-home transactions), dependent transactions, data skew, and temporal dynamics.
+Penteract is a configurable OLTP workload generator for benchmarking geo-distributed databases. Built on top of the TPC-C schema, Penteract introduces a wide range of knobs to control the transaction mix, the number of keys touched per transaction, the geo-distribution profile (i.e., percentage of local single-home, foreign single-home, and multi-home transactions), dependent transactions, data skew, and temporal dynamics.
 
 Thanks to its configurability, Penteract can replicate several commonly used OLTP workload generators, including TPC-C, YCSB, PPS, SmallBank, MovR, DS Movie, and DS Hotels. Namely, with the right configuration, it can mimic the performance impact of each of them. Additionally, it reaches regions of the workload design space that none of them cover.
 
