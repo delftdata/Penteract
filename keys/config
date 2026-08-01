@@ -1,0 +1,759 @@
+Host eu-west-1-server-0
+    HostName 54.176.113.172
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.176.113.172
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.213
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-1-server-1
+    HostName 18.145.178.118
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.178.118
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.89
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-1-server-2
+    HostName 52.53.130.198
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 52.53.130.198
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.49
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-1-server-3
+    HostName 54.67.139.72
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.67.139.72
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.55
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-1-client-4
+    HostName 13.57.188.59
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.57.188.59
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.63
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-2-server-0
+    HostName 18.145.164.132
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.164.132
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.51
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-2-server-1
+    HostName 13.57.237.117
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.57.237.117
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.126
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-2-server-2
+    HostName 52.53.18.191
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 52.53.18.191
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.236
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-2-server-3
+    HostName 13.56.197.7
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.56.197.7
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.182
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host eu-west-2-client-4
+    HostName 52.53.27.163
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 52.53.27.163
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.116
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-1-server-0
+    HostName 18.144.243.22
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.144.243.22
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.238
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-1-server-1
+    HostName 18.145.244.49
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.244.49
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.57
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-1-server-2
+    HostName 13.57.177.84
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.57.177.84
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.30
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-1-server-3
+    HostName 54.183.185.4
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.183.185.4
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.253
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-1-client-4
+    HostName 18.145.67.119
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.67.119
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.155
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-2-server-0
+    HostName 54.67.163.167
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.67.163.167
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.242
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-2-server-1
+    HostName 18.145.100.149
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.100.149
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.230
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-2-server-2
+    HostName 54.67.142.60
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.67.142.60
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.133
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-2-server-3
+    HostName 18.145.181.239
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.181.239
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.134
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-west-2-client-4
+    HostName 13.56.11.163
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.56.11.163
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.247
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-1-server-0
+    HostName 52.53.14.185
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 52.53.14.185
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.96
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-1-server-1
+    HostName 13.56.189.24
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 13.56.189.24
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.123
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-1-server-2
+    HostName 18.145.247.7
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.247.7
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.144
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-1-server-3
+    HostName 52.53.9.106
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 52.53.9.106
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.117
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-1-client-4
+    HostName 18.145.106.218
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.106.218
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.86
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-2-server-0
+    HostName 18.145.25.49
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.25.49
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.48
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-2-server-1
+    HostName 18.145.152.235
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.152.235
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.243
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-2-server-2
+    HostName 18.145.128.98
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.128.98
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.22
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-2-server-3
+    HostName 18.145.208.72
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.208.72
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.165
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host us-east-2-client-4
+    HostName 54.176.17.255
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.176.17.255
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.56
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-1-server-0
+    HostName 54.67.133.68
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.67.133.68
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.191
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-1-server-1
+    HostName 18.145.230.253
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.230.253
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.254
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-1-server-2
+    HostName 184.72.5.129
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 184.72.5.129
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.58
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-1-server-3
+    HostName 18.145.12.123
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.12.123
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.128
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-1-client-4
+    HostName 54.177.95.25
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.177.95.25
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.187
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-2-server-0
+    HostName 18.145.57.120
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.57.120
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.127
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-2-server-1
+    HostName 18.145.213.201
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.213.201
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.81
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-2-server-2
+    HostName 3.101.31.197
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 3.101.31.197
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.227
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-2-server-3
+    HostName 54.215.185.93
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 54.215.185.93
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.69
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host ap-northeast-2-client-4
+    HostName 18.145.245.133
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 18.145.245.133
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
+
+Host 10.0.1.94
+    User ubuntu
+    IdentityFile ~/.ssh/my_aws_key_us-west-1.pem
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null
