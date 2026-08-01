@@ -28,7 +28,7 @@ To test how accurately Penteract can model existing benchmarks, we examined the 
 
 <p align="center"><img src="fidelity.svg"></p>
 
-## Example of Analysis
+## Example Analysis
 
 Since every dimension of Penteract is independently tunable, we can sweep entire regions of the workload space in a single experiment. For example, varying both the geo-distribution profile and the operation intensity reveals how the throughput and latency of Detock, SLOG, Calvin, Janus, and CockroachDB evolve across these dimensions.
 
