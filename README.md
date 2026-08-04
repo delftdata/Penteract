@@ -39,3 +39,5 @@ Since every dimension of Penteract is independently tunable, we can sweep entire
 To run Penteract, begin by compiling the system following [these instructions](https://github.com/delftdata/Penteract/blob/main/Build.md).
 
 Then you can launch a cluster and run experiments following [these instructions](https://github.com/delftdata/Penteract/blob/main/tools/README.md).
+
+To run the ACID Compliance checks follow the instructions [here](https://github.com/delftdata/Penteract/blob/main/ACID_Compliance.md).
