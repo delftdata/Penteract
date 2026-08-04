@@ -1,0 +1,6 @@
+scope,lock_manager,remaster_protocol,test_filter,image_tag,build_ok,run_exit,total_tests,passed_tests,failed_tests,elapsed_ms,log_file
+detock,DDR,COUNTERLESS,AllProtocols/IsolationLevelMultiRegionTest.*/Detock,mr-iso-ddr-counterless,1,0,2,2,0,692,acid_results/multiregion_isolation_logs/detock.log
+ddr_only,DDR,COUNTERLESS,AllProtocols/IsolationLevelMultiRegionTest.*/DDROnly,mr-iso-ddr-counterless,1,0,2,2,0,757,acid_results/multiregion_isolation_logs/ddr_only.log
+slog,DDR,COUNTERLESS,AllProtocols/IsolationLevelMultiRegionTest.*/Slog,mr-iso-ddr-counterless,1,0,2,2,0,691,acid_results/multiregion_isolation_logs/slog.log
+calvin,DDR,COUNTERLESS,AllProtocols/IsolationLevelMultiRegionTest.*/Calvin,mr-iso-ddr-counterless,1,0,2,2,0,814,acid_results/multiregion_isolation_logs/calvin.log
+janus,DDR,COUNTERLESS,AllProtocols/IsolationLevelMultiRegionTest.*/Janus,mr-iso-ddr-counterless,1,0,2,1,0,322,acid_results/multiregion_isolation_logs/janus.log

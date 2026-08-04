@@ -9,6 +9,9 @@
 #include "connection/zmq_utils.h"
 #include "module/consensus.h"
 #include "module/forwarder.h"
+#include "module/janus/acceptor.h"
+#include "module/janus/coordinator.h"
+#include "module/janus/scheduler.h"
 #include "module/log_manager.h"
 #include "module/multi_home_orderer.h"
 #include "module/scheduler.h"
@@ -268,6 +271,73 @@ void TestSlog::SendTxn(Transaction* txn) {
 }
 
 Transaction TestSlog::RecvTxnResult() {
+  api::Response res;
+  if (!RecvDeserializedProtoWithEmptyDelim(client_socket_, res)) {
+    LOG(FATAL) << "Malformed response to client transaction.";
+    return Transaction();
+  }
+  const auto& txn = res.txn().txn();
+  LOG(INFO) << "Received response. Stream id: " << res.stream_id();
+  return txn;
+}
+
+TestJanus::TestJanus(const ConfigurationPtr& config)
+    : config_(config),
+      sharder_(Sharder::MakeSharder(config)),
+      storage_(new MemOnlyStorage()),
+      broker_(Broker::New(config, kTestModuleTimeout)),
+      client_context_(1) {
+  client_context_.set(zmq::ctxopt::blocky, false);
+  client_socket_ = zmq::socket_t(client_context_, ZMQ_DEALER);
+}
+
+void TestJanus::Data(Key&& key, Record&& record) {
+  CHECK(sharder_->is_local_key(key)) << "Key \"" << key << "\" belongs to partition "
+                                     << sharder_->compute_partition(key);
+  storage_->Write(key, record);
+}
+
+void TestJanus::AddServerAndClient() { server_ = MakeRunnerFor<Server>(broker_, nullptr, kTestModuleTimeout); }
+
+void TestJanus::AddCoordinator() {
+  coordinator_ = MakeRunnerFor<janus::Coordinator>(broker_->context(), broker_->config(), nullptr, kTestModuleTimeout);
+}
+
+void TestJanus::AddAcceptor() {
+  acceptor_ = MakeRunnerFor<janus::Acceptor>(broker_->context(), broker_->config(), nullptr, kTestModuleTimeout);
+}
+
+void TestJanus::AddScheduler() {
+  scheduler_ = MakeRunnerFor<janus::Scheduler>(broker_, storage_, nullptr, kTestModuleTimeout);
+}
+
+void TestJanus::StartInNewThreads() {
+  broker_->StartInNewThreads();
+  if (server_) {
+    server_->StartInNewThread();
+    string endpoint = "tcp://localhost:" + to_string(config_->server_port());
+    client_socket_.connect(endpoint);
+  }
+  if (coordinator_) {
+    coordinator_->StartInNewThread();
+  }
+  if (acceptor_) {
+    acceptor_->StartInNewThread();
+  }
+  if (scheduler_) {
+    scheduler_->StartInNewThread();
+  }
+}
+
+void TestJanus::SendTxn(Transaction* txn) {
+  CHECK(server_ != nullptr) << "TestJanus does not have a server";
+  api::Request request;
+  auto txn_req = request.mutable_txn();
+  txn_req->set_allocated_txn(txn);
+  SendSerializedProtoWithEmptyDelim(client_socket_, request);
+}
+
+Transaction TestJanus::RecvTxnResult() {
   api::Response res;
   if (!RecvDeserializedProtoWithEmptyDelim(client_socket_, res)) {
     LOG(FATAL) << "Malformed response to client transaction.";

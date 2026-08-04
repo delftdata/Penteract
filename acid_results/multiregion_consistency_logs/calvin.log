@@ -1,0 +1,655 @@
+Running main() from /src/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = AllProtocols/ConsistencyMultiRegionTest.RunsConsistentWorkload/Calvin
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from AllProtocols/ConsistencyMultiRegionTest
+[ RUN      ] AllProtocols/ConsistencyMultiRegionTest.RunsConsistentWorkload/Calvin
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0519 23:26:16.197151     7 load_tables.cpp:415] Generating ~2 warehouses using 1 threads. 
+I0519 23:26:16.198072     7 load_tables.cpp:52] Loading 100000 items for each of 2 representative warehouses
+I0519 23:26:16.385876     7 load_tables.cpp:90] Total Item table size: 36622240
+I0519 23:26:17.769922    16 load_tables.cpp:39] Total table sizes:
+I0519 23:26:17.769948    16 load_tables.cpp:40] Total Warehouse table size: 400
+I0519 23:26:17.769949    16 load_tables.cpp:41] Total Stock table size: 106759872
+I0519 23:26:17.769950    16 load_tables.cpp:42] Total District table size: 4084
+I0519 23:26:17.769951    16 load_tables.cpp:43] Total Customer table size: 50824244
+I0519 23:26:17.769951    16 load_tables.cpp:44] Total History table size: 50824244
+I0519 23:26:17.769953    16 load_tables.cpp:45] Total Order table size: 5287050
+I0519 23:26:17.769953    16 load_tables.cpp:46] Total New Order table size: 1640220
+I0519 23:26:17.769954    16 load_tables.cpp:47] Total Order Line table size: 55318740
+I0519 23:26:21.391557     7 load_tables.cpp:415] Generating ~2 warehouses using 1 threads. 
+I0519 23:26:21.391629     7 load_tables.cpp:52] Loading 100000 items for each of 2 representative warehouses
+I0519 23:26:21.558002     7 load_tables.cpp:90] Total Item table size: 36622240
+I0519 23:26:22.907238    17 load_tables.cpp:39] Total table sizes:
+I0519 23:26:22.907256    17 load_tables.cpp:40] Total Warehouse table size: 400
+I0519 23:26:22.907258    17 load_tables.cpp:41] Total Stock table size: 106759872
+I0519 23:26:22.907259    17 load_tables.cpp:42] Total District table size: 4084
+I0519 23:26:22.907259    17 load_tables.cpp:43] Total Customer table size: 50824244
+I0519 23:26:22.907260    17 load_tables.cpp:44] Total History table size: 50824244
+I0519 23:26:22.907261    17 load_tables.cpp:45] Total Order table size: 5287050
+I0519 23:26:22.907262    17 load_tables.cpp:46] Total New Order table size: 1640220
+I0519 23:26:22.907263    17 load_tables.cpp:47] Total Order Line table size: 55318740
+I0519 23:26:26.563598     7 load_tables.cpp:415] Generating ~2 warehouses using 1 threads. 
+I0519 23:26:26.563680     7 load_tables.cpp:52] Loading 100000 items for each of 2 representative warehouses
+I0519 23:26:26.715261     7 load_tables.cpp:90] Total Item table size: 36622240
+I0519 23:26:28.158646    18 load_tables.cpp:39] Total table sizes:
+I0519 23:26:28.158677    18 load_tables.cpp:40] Total Warehouse table size: 400
+I0519 23:26:28.158679    18 load_tables.cpp:41] Total Stock table size: 106759872
+I0519 23:26:28.158680    18 load_tables.cpp:42] Total District table size: 4084
+I0519 23:26:28.158680    18 load_tables.cpp:43] Total Customer table size: 50824244
+I0519 23:26:28.158681    18 load_tables.cpp:44] Total History table size: 50824244
+I0519 23:26:28.158682    18 load_tables.cpp:45] Total Order table size: 5287050
+I0519 23:26:28.158684    18 load_tables.cpp:46] Total New Order table size: 1640220
+I0519 23:26:28.158684    18 load_tables.cpp:47] Total Order Line table size: 55318740
+I0519 23:26:31.719056     7 load_tables.cpp:415] Generating ~2 warehouses using 1 threads. 
+I0519 23:26:31.719233     7 load_tables.cpp:52] Loading 100000 items for each of 2 representative warehouses
+I0519 23:26:31.884629     7 load_tables.cpp:90] Total Item table size: 36622240
+I0519 23:26:33.281143    19 load_tables.cpp:39] Total table sizes:
+I0519 23:26:33.281170    19 load_tables.cpp:40] Total Warehouse table size: 400
+I0519 23:26:33.281172    19 load_tables.cpp:41] Total Stock table size: 106759872
+I0519 23:26:33.281173    19 load_tables.cpp:42] Total District table size: 4084
+I0519 23:26:33.281174    19 load_tables.cpp:43] Total Customer table size: 50824244
+I0519 23:26:33.281175    19 load_tables.cpp:44] Total History table size: 50824244
+I0519 23:26:33.281175    19 load_tables.cpp:45] Total Order table size: 5287050
+I0519 23:26:33.281176    19 load_tables.cpp:46] Total New Order table size: 1640220
+I0519 23:26:33.281177    19 load_tables.cpp:47] Total Order Line table size: 55318740
+I0519 23:26:36.892958    22 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc0:0"
+I0519 23:26:36.893544    23 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc0:1"
+I0519 23:26:36.894255    24 server.cpp:72] Bound Server to: tcp://*:28638
+I0519 23:26:36.909293    26 networked_module.cpp:75] Bound Sequencer to "ipc:///tmp/test_mr_tpcc0:3"
+I0519 23:26:36.910740    25 networked_module.cpp:75] Bound Forwarder to "ipc:///tmp/test_mr_tpcc0:2"
+I0519 23:26:36.911036    39 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc1:0"
+I0519 23:26:36.912561    40 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc1:1"
+I0519 23:26:36.929412    42 networked_module.cpp:75] Bound Forwarder to "ipc:///tmp/test_mr_tpcc1:2"
+I0519 23:26:36.929951    52 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc2:0"
+I0519 23:26:36.929996    43 networked_module.cpp:75] Bound Sequencer to "ipc:///tmp/test_mr_tpcc1:3"
+I0519 23:26:36.930474    54 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc2:1"
+I0519 23:26:36.931427    55 server.cpp:72] Bound Server to: tcp://*:14477
+I0519 23:26:36.931653    57 networked_module.cpp:75] Bound Forwarder to "ipc:///tmp/test_mr_tpcc2:2"
+I0519 23:26:36.931849    41 server.cpp:72] Bound Server to: tcp://*:23095
+I0519 23:26:36.932507    41 server.cpp:203] Machine [1,0,0] is online
+I0519 23:26:36.933101    55 server.cpp:203] Machine [0,0,1] is online
+I0519 23:26:36.933769    69 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc3:1"
+I0519 23:26:36.933984    70 server.cpp:72] Bound Server to: tcp://*:14469
+I0519 23:26:36.934697    58 networked_module.cpp:75] Bound Sequencer to "ipc:///tmp/test_mr_tpcc2:3"
+I0519 23:26:36.935070    68 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_tpcc3:0"
+I0519 23:26:36.937265    24 server.cpp:203] Machine [1,0,0] is online
+I0519 23:26:36.937280    24 server.cpp:203] Machine [1,0,1] is online
+I0519 23:26:36.940392    75 networked_module.cpp:75] Bound Sequencer to "ipc:///tmp/test_mr_tpcc3:3"
+I0519 23:26:36.940459    71 networked_module.cpp:75] Bound Forwarder to "ipc:///tmp/test_mr_tpcc3:2"
+I0519 23:26:36.940683    55 server.cpp:203] Machine [1,0,1] is online
+I0519 23:26:36.940850    24 server.cpp:203] Machine [0,0,1] is online
+I0519 23:26:36.940855    24 server.cpp:206] All machines are online
+I0519 23:26:36.941684    41 server.cpp:203] Machine [1,0,1] is online
+I0519 23:26:37.007076     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.007187     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.007360     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.007664     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.007893     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.007998     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008127     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008190     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008311     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008455     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008574     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.008944     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.009195     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.009333     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.009441     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.009464     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.027324     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.027381     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.027427     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.027462     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.027534     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033272     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033375     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033432     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033471     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033509     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033627     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033766     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033849     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033877     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.033944     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034053     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034122     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034179     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034237     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034312     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034381     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034463     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034543     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034603     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034659     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034703     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034744     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034773     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034850     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.034906     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035043     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035162     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035285     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035411     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035542     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.035617     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.037371    41 server.cpp:203] Machine [0,0,0] is online
+I0519 23:26:37.037395    41 server.cpp:206] All machines are online
+I0519 23:26:37.050945     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.050994     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051048     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051091     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051152     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051203     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051249     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051285     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051313     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051334     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051370     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051405     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051430     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051445     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051461     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051482     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051517     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051558     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051587     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051599     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051607     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051621     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051640     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051651     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051664     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051709     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051748     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051774     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.051791     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.065862     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.065917     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.065945     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.065968     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.065984     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066009     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066035     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066059     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066087     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066110     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066135     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066161     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066190     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066216     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066243     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066267     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066289     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066311     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066330     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066355     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066380     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066404     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066424     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066438     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066480     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066506     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066530     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066552     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066577     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.066602     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.071008    55 server.cpp:203] Machine [0,0,0] is online
+I0519 23:26:37.071026    55 server.cpp:206] All machines are online
+I0519 23:26:37.080108     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.080181     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.080235     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.082320    70 server.cpp:203] Machine [0,0,1] is online
+I0519 23:26:37.088805     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088836     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088860     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088893     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088912     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088936     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.088969     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089005     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089042     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089075     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089110     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089144     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089180     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089222     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089267     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089314     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089345     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089365     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089387     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089424     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089455     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089486     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089514     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089535     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089565     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089586     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089617     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089646     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089676     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089706     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089745     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089807     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089847     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089881     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089916     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089942     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.089972     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090001     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090031     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090061     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090091     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090122     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090152     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090181     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.090209     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104070     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104398     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104560     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104627     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104676     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104723     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104809     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104856     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104915     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.104961     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105007     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105059     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105114     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105176     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105201     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105223     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105248     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105265     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105278     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105299     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105320     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105341     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105362     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105382     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105403     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105424     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105445     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105464     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105485     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105504     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105525     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105541     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105552     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105572     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105592     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105608     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105620     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105657     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105677     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105690     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105710     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105854     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105931     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.105976     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.106021     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.106079     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.110716    70 server.cpp:203] Machine [1,0,0] is online
+I0519 23:26:37.118105     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.119158     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.119553     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.120055     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.120651     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.121425     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.121865     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.122359     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.122690     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123059     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123432     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123489     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123556     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123589     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123621     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.123674     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.125759    70 server.cpp:203] Machine [0,0,0] is online
+I0519 23:26:37.125775    70 server.cpp:206] All machines are online
+I0519 23:26:37.131604     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.131773     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.131916     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132021     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132120     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132227     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132334     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132417     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132515     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132615     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.132697     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135174     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135205     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135277     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135317     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135334     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135344     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135376     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135428     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135463     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135509     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135566     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135612     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135627     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135643     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135653     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135669     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.135680     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136058     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136128     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136209     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136289     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136369     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136468     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136531     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136598     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136683     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136829     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.136924     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.137060     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.137171     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145502     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145529     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145555     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145602     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145615     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145624     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145637     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145658     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145678     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145715     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145733     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145742     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145750     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145761     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145782     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145800     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145808     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145815     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145920     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145964     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.145985     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.146003     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.146011     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.146019     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.151961     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.152261     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.152925     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.153357     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.153613     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154203     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154469     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154552     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154615     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154650     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154707     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154821     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.154901     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.155007     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.155079     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.155180     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.155259     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.159605     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.159787     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.159825     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.159853     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.159922     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160005     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160095     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160146     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160168     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160187     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160219     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160274     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160327     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160372     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160392     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160411     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160440     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160492     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160543     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160585     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160604     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160627     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160701     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160769     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.160851     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161007     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161019     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161029     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161038     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161053     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161077     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161098     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161105     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161114     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161127     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161146     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161160     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161178     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161186     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161195     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161209     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161232     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161255     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161273     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161283     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161290     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161303     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161322     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161336     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161355     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161362     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161369     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161377     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161386     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161392     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161401     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161407     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161414     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161425     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161441     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161448     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161456     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161463     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161474     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161490     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161497     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161505     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161516     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161532     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161540     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161547     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161558     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161574     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161581     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161588     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161595     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161607     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161625     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161644     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161660     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.161671     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.166870     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.167793     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.167899     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168051     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168128     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168265     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168344     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168422     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168552     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168624     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.168864     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.169024     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.169109     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.169248     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.169270     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172246     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172310     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172319     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172327     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172336     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172344     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172389     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172398     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172410     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172421     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172451     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172462     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172525     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172554     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172575     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.172596     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173570     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173619     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173630     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173640     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173671     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173688     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173738     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173767     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173791     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.173828     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.174082     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.174564     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.174685     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.181272     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.181289     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182154     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182250     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182302     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182363     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182410     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182477     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182518     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182575     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182667     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.182772     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.185802     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.185885     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.185988     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186077     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186151     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186235     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186291     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186347     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186400     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186461     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186523     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186579     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186635     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186796     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186825     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186833     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186843     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186851     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.186962     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187024     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187073     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187142     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187250     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187345     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187808     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187885     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187927     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187954     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.187974     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188005     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188027     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188046     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188064     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188082     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188102     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188141     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188159     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188177     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188196     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188215     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188244     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188265     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188284     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188302     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188320     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188339     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188375     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188395     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188411     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188429     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188447     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188467     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188495     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188522     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188540     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188594     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188644     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188840     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188910     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:37.188977     7 test_utils.cpp:280] Received response. Stream id: 0
+I0519 23:26:39.142252     7 module.cpp:19] MultiHomeOrderer - thread stopped
+I0519 23:26:39.146032     7 module.cpp:19] Paxos-8 - thread stopped
+I0519 23:26:39.152345     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:26:39.158021     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:26:39.163360     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:26:39.169911     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:26:39.194783     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.199898     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.205264     7 module.cpp:19] Sequencer - thread stopped
+I0519 23:26:39.205917     7 module.cpp:19] Batcher - thread stopped
+I0519 23:26:39.212136     7 module.cpp:19] Forwarder - thread stopped
+I0519 23:26:39.216878     7 module.cpp:19] Server - thread stopped
+I0519 23:26:39.218151     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:39.222913     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:39.544260     7 module.cpp:19] MultiHomeOrderer - thread stopped
+I0519 23:26:39.547371     7 module.cpp:19] Paxos-8 - thread stopped
+I0519 23:26:39.550438     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:26:39.553058     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:26:39.556134     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:26:39.562063     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:26:39.571493     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.577062     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.580336     7 module.cpp:19] Sequencer - thread stopped
+I0519 23:26:39.583424     7 module.cpp:19] Batcher - thread stopped
+I0519 23:26:39.586426     7 module.cpp:19] Forwarder - thread stopped
+I0519 23:26:39.592026     7 module.cpp:19] Server - thread stopped
+I0519 23:26:39.598039     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:39.601321     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:39.954550     7 module.cpp:19] MultiHomeOrderer - thread stopped
+I0519 23:26:39.959611     7 module.cpp:19] Paxos-9 - thread stopped
+I0519 23:26:39.959831     7 module.cpp:19] Paxos-8 - thread stopped
+I0519 23:26:39.959988     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:26:39.965255     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:26:39.965962     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:26:39.971882     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:26:39.978259     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.978305     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:39.984841     7 module.cpp:19] Sequencer - thread stopped
+I0519 23:26:39.991247     7 module.cpp:19] Batcher - thread stopped
+I0519 23:26:39.997802     7 module.cpp:19] Forwarder - thread stopped
+I0519 23:26:40.004240     7 module.cpp:19] Server - thread stopped
+I0519 23:26:40.010866     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:40.017333     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:40.415375     7 module.cpp:19] MultiHomeOrderer - thread stopped
+I0519 23:26:40.421284     7 module.cpp:19] Paxos-9 - thread stopped
+I0519 23:26:40.427246     7 module.cpp:19] Paxos-8 - thread stopped
+I0519 23:26:40.433270     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:26:40.439205     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:26:40.445834     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:26:40.452191     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:26:40.464224     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:40.471144     7 module.cpp:19] LogManager - thread stopped
+I0519 23:26:40.477213     7 module.cpp:19] Sequencer - thread stopped
+I0519 23:26:40.478107     7 module.cpp:19] Batcher - thread stopped
+I0519 23:26:40.483778     7 module.cpp:19] Forwarder - thread stopped
+I0519 23:26:40.490376     7 module.cpp:19] Server - thread stopped
+I0519 23:26:40.490674     7 module.cpp:19] Broker - thread stopped
+I0519 23:26:40.496178     7 module.cpp:19] Broker - thread stopped
+[       OK ] AllProtocols/ConsistencyMultiRegionTest.RunsConsistentWorkload/Calvin (24808 ms)
+[----------] 1 test from AllProtocols/ConsistencyMultiRegionTest (24808 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (24808 ms total)
+[  PASSED  ] 1 test.

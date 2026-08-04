@@ -89,6 +89,8 @@ std::shared_ptr<Sharder> Sharder::MakeSharder(const ConfigurationPtr& config) {
     return std::make_shared<MovieSharder>(config);
   } else if (config->proto_config().has_smallbank_partitioning()) {
     return std::make_shared<SmallBankSharder>(config);
+  } else if (config->proto_config().has_write_skew_partitioning()) {
+    return std::make_shared<WriteSkewSharder>(config);
   }
   return std::make_shared<HashSharder>(config);
 }
@@ -255,6 +257,15 @@ uint32_t SmallBankSharder::compute_partition(const Key& key) const {
     return (client_id / num_regions_) % num_partitions_;
     return 0;
   }
+}
+
+/**
+ * WriteSkew Sharder
+ */
+WriteSkewSharder::WriteSkewSharder(const ConfigurationPtr& config) : Sharder(config) {}
+uint32_t WriteSkewSharder::compute_partition(const Key& key) const {
+  int id = *reinterpret_cast<const int*>(key.data());
+  return (id - 1) % num_partitions_;
 }
 
 }  // namespace slog

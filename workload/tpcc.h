@@ -1,5 +1,6 @@
 #pragma once
 
+#include <algorithm>
 #include <vector>
 
 #include "common/configuration.h"
@@ -43,7 +44,7 @@ class TPCCWorkload : public Workload {
   std::vector<int> txn_mix_;
 
   struct TPCCIds {
-    TPCCIds(int i = 1) : o_id(tpcc::kOrdPerDist + i), no_o_id(1), h_id(i + 1) {}
+    TPCCIds(int i = 1) : o_id(tpcc::kOrdPerDist + i), no_o_id(tpcc::kOrdPerDist - 900 + i), h_id(i + 1) {}
     int o_id;
     int no_o_id;
     int h_id;
@@ -69,13 +70,13 @@ class TPCCWorkload : public Workload {
       return o_id;
     }
 
-    int NextNOOId(int w_id, int d_id) { 
+    int NextNOOId(int w_id, int d_id) {
       auto no_o_id = ids_[w_id - 1][d_id - 1].no_o_id;
       ids_[w_id - 1][d_id - 1].no_o_id += step_;
       return no_o_id;
     }
 
-    int NextHId(int w_id, int d_id) { 
+    int NextHId(int w_id, int d_id) {
       auto h_id = ids_[w_id - 1][d_id - 1].h_id;
       ids_[w_id - 1][d_id - 1].h_id += step_;
       return h_id;

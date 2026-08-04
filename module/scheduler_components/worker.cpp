@@ -47,6 +47,9 @@ Worker::Worker(int id, const std::shared_ptr<Broker>& broker, const std::shared_
     case internal::ExecutionType::small_bank:
       execution_ = make_unique<SmallBankExecution>(Sharder::MakeSharder(config()), storage);
       break;
+    case internal::ExecutionType::WRITE_SKEW:
+      execution_ = make_unique<WriteSkewExecution>(Sharder::MakeSharder(config()), storage);
+      break;
     default:
       execution_ = make_unique<NoopExecution>();
       break;

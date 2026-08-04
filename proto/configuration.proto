@@ -144,6 +144,11 @@ message SmallBankPartitioning {
     int32 clients = 1;
 }
 
+message WriteSkewPartitioning {
+    // Number of write-skew probe pairs
+    int32 pairs = 1;
+}
+
 message CpuPinning {
     ModuleId module = 1;
     uint32 cpu = 2;
@@ -173,6 +178,7 @@ enum ExecutionType {
     MOVIE = 5;
     small_bank = 6;
     Bench_X = 7;
+    WRITE_SKEW = 8;
 }
 
 /**
@@ -209,6 +215,7 @@ message Configuration {
         MoviePartitioning movie_partitioning = 40;
         SmallBankPartitioning smallbank_partitioning = 42;
         BenchXPartitioning benchx_partitioning = 43;
+        WriteSkewPartitioning write_skew_partitioning = 44;
     }
     // Number of worker threads for processing the transactions
     uint32 num_workers = 14;

@@ -256,7 +256,7 @@ void TPCCWorkload::NewOrder(Transaction& txn, TransactionProfile& pro, int w_id,
       pro.is_multi_home = true;
     }
     ol[i] = tpcc::NewOrderTxn::OrderLine({
-        .id = static_cast<int>(i),
+        .id = static_cast<int>(i + 1),
         .supply_w_id = supply_w_id,
         .item_id = NURand(rg_, final_item_skew, 1, tpcc::kMaxItems),
         .quantity = quantity_rnd(rg_),

@@ -180,6 +180,19 @@ class SegmentT {
     return count;
   }
 
+  template <typename Fn>
+  void ForEach(Fn&& fn) const {
+    rw_latch_.RLock();
+    for (size_t i = 0; i < buckets_->count; i++) {
+      auto node = buckets_->bucket_roots[i];
+      while (node) {
+        fn(node->key, node->value);
+        node = node->next;
+      }
+    }
+    rw_latch_.RUnlock();
+  }
+
  private:
   // Must hold lock
   static uint64_t GetIndex(size_t nbuckets, size_t hash) { return (hash >> ShardBits) & (nbuckets - 1); }
@@ -290,6 +303,16 @@ class ConcurrentHashMap {
       }
     }
     return count;
+  }
+
+  template <typename Fn>
+  void ForEach(Fn&& fn) const {
+    for (size_t i = 0; i < NumShards; i++) {
+      auto segment = segments_[i].load();
+      if (segment != nullptr) {
+        segment->ForEach(fn);
+      }
+    }
   }
 
  private:

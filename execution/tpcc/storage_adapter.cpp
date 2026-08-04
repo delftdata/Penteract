@@ -2,6 +2,8 @@
 
 #include <glog/logging.h>
 
+#include "storage/mem_only_storage.h"
+
 namespace slog {
 namespace tpcc {
 
@@ -23,6 +25,33 @@ bool KVStorageAdapter::Insert(const std::string& key, std::string&& value) {
   Record r(std::move(value));
   r.SetMetadata(metadata_initializer_->Compute(key));
   storage_->Write(key, std::move(r));
+  return true;
+}
+
+std::vector<std::pair<std::string, std::string>> KVStorageAdapter::ScanPrefix(const std::string& prefix) {
+  std::vector<std::pair<std::string, std::string>> rows;
+  auto mem_storage = std::dynamic_pointer_cast<MemOnlyStorage>(storage_);
+  if (mem_storage == nullptr) {
+    return rows;
+  }
+
+  mem_storage->ForEach([&](const Key& key, const Record& record) {
+    if (key.compare(0, prefix.size(), prefix) == 0) {
+      rows.emplace_back(key, record.to_string());
+    }
+  });
+  return rows;
+}
+
+bool KVStorageAdapter::Update(const std::string& key, std::function<void(std::string&)>&& update_fn) {
+  Record r;
+  if (!storage_->Read(key, r)) {
+    return false;
+  }
+  auto value = r.to_string();
+  update_fn(value);
+  r.SetValue(value);
+  storage_->Write(key, r);
   return true;
 }
 

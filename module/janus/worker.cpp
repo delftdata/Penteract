@@ -48,6 +48,9 @@ Worker::Worker(int id, const std::shared_ptr<Broker>& broker, const std::shared_
     case slog::internal::ExecutionType::small_bank:
       execution_ = make_unique<slog::SmallBankExecution>(sharder_, storage);
       break;
+    case slog::internal::ExecutionType::WRITE_SKEW:
+      execution_ = make_unique<slog::WriteSkewExecution>(sharder_, storage);
+      break;
     default:
       execution_ = make_unique<slog::NoopExecution>();
       break;

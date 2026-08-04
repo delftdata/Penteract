@@ -1,0 +1,21 @@
+FROM ubuntu:focal
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get -y install wget build-essential cmake git pkg-config
+
+WORKDIR /src
+COPY ./install-deps.sh .
+RUN ./install-deps.sh -d
+COPY . .
+
+ARG LOCK_MANAGER="DDR"
+ARG REMASTER_PROTOCOL="COUNTERLESS"
+ARG TEST_TARGET="tpcc_isolation_test"
+RUN mkdir build && cd build && \
+    cmake .. -DBUILD_SLOG_TESTS=ON -DLOCK_MANAGER=${LOCK_MANAGER} -DREMASTER_PROTOCOL=${REMASTER_PROTOCOL} -DCMAKE_BUILD_TYPE=release && \
+    make -j$(nproc) ${TEST_TARGET}
+
+ARG TEST_FILTER="*"
+ENV GTEST_FILTER=${TEST_FILTER}
+ENV TEST_TARGET=${TEST_TARGET}
+CMD ["sh", "-c", "cd build && ./test/${TEST_TARGET} --gtest_filter=${GTEST_FILTER}"]

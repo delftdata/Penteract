@@ -1,0 +1,159 @@
+Running main() from /src/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = AllProtocols/IsolationLevelMultiRegionTest.*/Janus
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from AllProtocols/IsolationLevelMultiRegionTest
+[ RUN      ] AllProtocols/IsolationLevelMultiRegionTest.DetectsWriteSkewInStorage/Janus
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+I0519 23:32:34.581712     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 0
+I0519 23:32:34.582589     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 1
+I0519 23:32:34.582621     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 0
+I0519 23:32:34.582649     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 1
+I0519 23:32:34.582888    18 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew0:0"
+I0519 23:32:34.582991    19 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew0:1"
+I0519 23:32:34.583244    20 server.cpp:72] Bound Server to: tcp://*:15109
+I0519 23:32:34.604422    21 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew0:2"
+I0519 23:32:34.604547    27 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew1:0"
+I0519 23:32:34.604575    22 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew0:3"
+I0519 23:32:34.604698    29 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew1:1"
+I0519 23:32:34.605054    32 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew1:3"
+I0519 23:32:34.605067    30 server.cpp:72] Bound Server to: tcp://*:25921
+I0519 23:32:34.605263    39 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew2:0"
+I0519 23:32:34.605511    20 server.cpp:203] Machine [0,0,1] is online
+I0519 23:32:34.620690    41 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew2:1"
+I0519 23:32:34.621085    31 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew1:2"
+I0519 23:32:34.621097    42 server.cpp:72] Bound Server to: tcp://*:20391
+I0519 23:32:34.621151    42 server.cpp:203] Machine [0,0,1] is online
+I0519 23:32:34.621197    43 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew2:2"
+I0519 23:32:34.621559    52 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew3:1"
+I0519 23:32:34.621799    51 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew3:0"
+I0519 23:32:34.621829    44 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew2:3"
+I0519 23:32:34.621857     7 consistency_check.cpp:58] WriteSkew Check: Detected WRITE SKEW. System provides SNAPSHOT ISOLATION or lower.
+I0519 23:32:34.622058    53 server.cpp:72] Bound Server to: tcp://*:25994
+I0519 23:32:34.622299    30 server.cpp:203] Machine [1,0,0] is online
+I0519 23:32:34.622385    55 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew3:3"
+I0519 23:32:34.622408    54 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew3:2"
+I0519 23:32:34.622412    20 server.cpp:203] Machine [1,0,0] is online
+I0519 23:32:34.622527    42 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.622553    30 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.622632    20 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.622641    20 server.cpp:206] All machines are online
+I0519 23:32:34.628384     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.630945     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.636787     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.641462     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.645845     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.646509     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.652532     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.657743     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.663614     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.665669     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.669523     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.669807     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.675585     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.681674     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.687510     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.690550     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.695622     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.698576     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.700594     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.703814     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.705575     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.709829     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.710632    30 server.cpp:203] Machine [0,0,0] is online
+I0519 23:32:34.710639    30 server.cpp:206] All machines are online
+I0519 23:32:34.713475     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.715555     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.718596     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.724751     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.727546     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.734421     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.739519     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.741736     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.742540     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.748840     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.753214     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.759318     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.760378     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.763497     7 module.cpp:19] Broker - thread stopped
+[       OK ] AllProtocols/IsolationLevelMultiRegionTest.DetectsWriteSkewInStorage/Janus (182 ms)
+[ RUN      ] AllProtocols/IsolationLevelMultiRegionTest.ExecutionProducesNoWriteSkew/Janus
+I0519 23:32:34.764174     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 0
+I0519 23:32:34.764200     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 1
+I0519 23:32:34.764223     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 0
+I0519 23:32:34.764247     7 load_tables.cpp:27] Loaded 100 write_skew rows for partition 1
+I0519 23:32:34.764508    70 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew0:0"
+I0519 23:32:34.764711    71 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew0:1"
+I0519 23:32:34.765089    78 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew1:0"
+I0519 23:32:34.765086    79 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew1:1"
+I0519 23:32:34.765229    80 server.cpp:72] Bound Server to: tcp://*:13105
+I0519 23:32:34.765247    82 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew1:3"
+I0519 23:32:34.765337    72 server.cpp:72] Bound Server to: tcp://*:27023
+I0519 23:32:34.765461    87 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew2:1"
+I0519 23:32:34.765519    81 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew1:2"
+I0519 23:32:34.765592    88 server.cpp:72] Bound Server to: tcp://*:28671
+I0519 23:32:34.765611    73 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew0:2"
+I0519 23:32:34.765625    74 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew0:3"
+I0519 23:32:34.765678    89 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew2:2"
+I0519 23:32:34.765720    90 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew2:3"
+I0519 23:32:34.765834    86 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew2:0"
+I0519 23:32:34.765937    80 server.cpp:203] Machine [0,0,0] is online
+I0519 23:32:34.766335    72 server.cpp:203] Machine [0,0,1] is online
+I0519 23:32:34.766392    72 server.cpp:203] Machine [1,0,0] is online
+I0519 23:32:34.766441   102 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew3:0"
+I0519 23:32:34.766474    80 server.cpp:203] Machine [1,0,0] is online
+I0519 23:32:34.766629   104 broker.cpp:54] Binding a broker thread to "ipc:///tmp/test_mr_write_skew3:1"
+/src/test/e2e/isolation_level_multiregion_test.cpp:104: Skipped
+Janus multi-region write-skew probe not supported (multi-home key expansion)
+I0519 23:32:34.766705   105 server.cpp:72] Bound Server to: tcp://*:14278
+I0519 23:32:34.766914    72 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.766928    72 server.cpp:206] All machines are online
+I0519 23:32:34.767057   106 networked_module.cpp:75] Bound Coordinator to "ipc:///tmp/test_mr_write_skew3:2"
+I0519 23:32:34.767148    80 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.767176    80 server.cpp:206] All machines are online
+I0519 23:32:34.767181     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.767246    88 server.cpp:203] Machine [1,0,1] is online
+I0519 23:32:34.767256   107 networked_module.cpp:75] Bound Acceptor to "ipc:///tmp/test_mr_write_skew3:3"
+I0519 23:32:34.772455     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.778544     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.783754     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.784616     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.789566     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.790722     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.796546     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.801803     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.807710     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.813704     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.819806     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.825670     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.831658     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.831795     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.836155     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.841862     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.843601     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.849645     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.854166     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.855615     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.855691     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.859860     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.861610     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.866279     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.871433     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.878334     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.879523     7 module.cpp:19] Scheduler - thread stopped
+I0519 23:32:34.885759     7 module.cpp:19] Worker-45 - thread stopped
+I0519 23:32:34.885885     7 module.cpp:19] Worker-46 - thread stopped
+I0519 23:32:34.891687     7 module.cpp:19] Worker-47 - thread stopped
+I0519 23:32:34.896119     7 module.cpp:19] Acceptor - thread stopped
+I0519 23:32:34.897617     7 module.cpp:19] Coordinator - thread stopped
+I0519 23:32:34.902132     7 module.cpp:19] Server - thread stopped
+I0519 23:32:34.902283     7 module.cpp:19] Broker - thread stopped
+I0519 23:32:34.903604     7 module.cpp:19] Broker - thread stopped
+[  SKIPPED ] AllProtocols/IsolationLevelMultiRegionTest.ExecutionProducesNoWriteSkew/Janus (139 ms)
+[----------] 2 tests from AllProtocols/IsolationLevelMultiRegionTest (322 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (322 ms total)
+[  PASSED  ] 1 test.
+[  SKIPPED ] 1 test, listed below:
+[  SKIPPED ] AllProtocols/IsolationLevelMultiRegionTest.ExecutionProducesNoWriteSkew/Janus

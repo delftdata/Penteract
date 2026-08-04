@@ -103,4 +103,10 @@ class SmallBankSharder : public Sharder {
   uint32_t num_regions_;
 };
 
+class WriteSkewSharder : public Sharder {
+ public:
+  WriteSkewSharder(const ConfigurationPtr& config);
+  uint32_t compute_partition(const Key& key) const final;
+};
+
 }  // namespace slog

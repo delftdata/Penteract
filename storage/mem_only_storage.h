@@ -24,6 +24,11 @@ class MemOnlyStorage : public Storage, public LookupMasterIndex {
   }
 
   std::size_t getKeyCount() const final { return table_.getKeyCount(); }
+
+  template <typename Fn>
+  void ForEach(Fn&& fn) const {
+    table_.ForEach(fn);
+  }
  private:
   ConcurrentHashMap<Key, Record> table_;
 };

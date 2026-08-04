@@ -57,6 +57,12 @@ To run a full scenario with Penteract, use the `run_config_on_remote.py` script:
 
 `python3 tools/run_config_on_remote.py -i omraz/oltp_survey:detock -m st5 -s scalability -w benchx -c examples/benchx/tu_cluster_benchx_ddr_ts.conf -u omraz -db Detock`
 
+## Native consistency checks
+
+The repo includes a native TPC-C consistency checker in the execution layer. It validates the actual `Table<>` state used by the workloads, rather than a separate SQL mirror. The checks cover all 12 TPC-C §3.3.2 consistency conditions (C1–C12) plus additional bookkeeping checks.
+
+The checker is exercised through `test/execution/tpcc/consistency_check_test.cpp`.
+
 ## Using tmux
 
 Since the experiments might take some time to run, it is recommended to use a multiplexer such as `tmux`. `tmux` will keep your session alive, even when you lose connection to the remote machine. Any commands (and history) will be saved.

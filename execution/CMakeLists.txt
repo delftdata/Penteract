@@ -5,6 +5,8 @@ target_sources(slog-core
     key_value.cpp
     tpcc.cpp
     tpcc/constants.h
+    tpcc/consistency_check.cpp
+    tpcc/consistency_check.h
     tpcc/deliver.cpp
     tpcc/load_tables.cpp
     tpcc/load_tables.h
@@ -22,6 +24,8 @@ target_sources(slog-core
     tpcc/types.h
     benchx.cpp
     benchx/constants.h
+    benchx/consistency_check.cpp
+    benchx/consistency_check.h
     benchx/new_order.cpp
     benchx/get_customer_by_name.cpp
     benchx/get_item_by_name.cpp
@@ -126,4 +130,18 @@ target_sources(slog-core
     smallbank/table.h
     smallbank/transaction.h
     smallbank/types.h
+    write_skew.cpp
+    write_skew/consistency_check.cpp
+    write_skew/consistency_check.h
+    write_skew/load_tables.cpp
+    write_skew/load_tables.h
+    write_skew/metadata_initializer.cpp
+    write_skew/metadata_initializer.h
+    write_skew/scalar.h
+    write_skew/storage_adapter.cpp
+    write_skew/storage_adapter.h
+    write_skew/table.h
+    write_skew/transaction.h
+    write_skew/types.h
+    write_skew/write_skew_txn.cpp
 )

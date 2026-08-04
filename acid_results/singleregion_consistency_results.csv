@@ -1,0 +1,6 @@
+scope,lock_manager,remaster_protocol,test_filter,image_tag,build_ok,run_exit,total_tests,passed_tests,failed_tests,elapsed_ms,log_file
+detock,DDR,COUNTERLESS,AllProtocols/ConsistencySingleRegionTest.RunsConsistentWorkload/Detock,ddr-counterless-consistency_singleregion_test,1,0,1,1,0,6030,acid_results/singleregion_consistency_logs/detock.log
+ddr_only,DDR,COUNTERLESS,AllProtocols/ConsistencySingleRegionTest.RunsConsistentWorkload/DDROnly,ddr-counterless-consistency_singleregion_test,1,0,1,1,0,5880,acid_results/singleregion_consistency_logs/ddr_only.log
+slog,DDR,COUNTERLESS,AllProtocols/ConsistencySingleRegionTest.RunsConsistentWorkload/Slog,ddr-counterless-consistency_singleregion_test,1,0,1,1,0,5728,acid_results/singleregion_consistency_logs/slog.log
+calvin,DDR,COUNTERLESS,AllProtocols/ConsistencySingleRegionTest.RunsConsistentWorkload/Calvin,ddr-counterless-consistency_singleregion_test,1,0,1,1,0,5720,acid_results/singleregion_consistency_logs/calvin.log
+janus,DDR,COUNTERLESS,AllProtocols/ConsistencySingleRegionTest.RunsConsistentWorkload/Janus,ddr-counterless-consistency_singleregion_test,1,0,1,0,1,5682,acid_results/singleregion_consistency_logs/janus.log

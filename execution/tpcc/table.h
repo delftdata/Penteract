@@ -38,7 +38,7 @@ class Table {
   std::vector<ScalarPtr> SelectGrouped(const std::vector<ScalarPtr>& pkey, const std::vector<Column>& columns) {
     auto storage_key = MakeStorageKey(pkey);
     auto storage_value = storage_adapter_->Read(storage_key);
-    if (storage_value == nullptr) {
+    if (storage_value == nullptr || storage_value->empty()) {
       return {};
     }
 

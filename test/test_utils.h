@@ -71,6 +71,7 @@ class TestSlog {
   const ConfigurationPtr& config() const { return config_; }
   const SharderPtr& sharder() const { return sharder_; }
   const std::shared_ptr<MetadataInitializer>& metadata_initializer() const { return metadata_initializer_; }
+  const shared_ptr<MemOnlyStorage>& storage() const { return storage_; }
 
  private:
   ConfigurationPtr config_;
@@ -89,6 +90,36 @@ class TestSlog {
 
   std::unordered_map<Channel, zmq::socket_t> inproc_sockets_;
   std::unordered_map<Channel, zmq::socket_t> outproc_sockets_;
+
+  zmq::context_t client_context_;
+  zmq::socket_t client_socket_;
+};
+
+class TestJanus {
+ public:
+  TestJanus(const ConfigurationPtr& config);
+  void Data(Key&& key, Record&& record);
+  void AddServerAndClient();
+  void AddCoordinator();
+  void AddAcceptor();
+  void AddScheduler();
+
+  void StartInNewThreads();
+  void SendTxn(Transaction* txn);
+  Transaction RecvTxnResult();
+
+  const ConfigurationPtr& config() const { return config_; }
+  const shared_ptr<MemOnlyStorage>& storage() const { return storage_; }
+
+ private:
+  ConfigurationPtr config_;
+  SharderPtr sharder_;
+  shared_ptr<MemOnlyStorage> storage_;
+  shared_ptr<Broker> broker_;
+  ModuleRunnerPtr server_;
+  ModuleRunnerPtr coordinator_;
+  ModuleRunnerPtr acceptor_;
+  ModuleRunnerPtr scheduler_;
 
   zmq::context_t client_context_;
   zmq::socket_t client_socket_;

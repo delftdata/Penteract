@@ -124,7 +124,7 @@ class BenchXWorkload : public Workload {
   std::vector<int> txn_mix_;
 
   struct BenchXIds {
-    BenchXIds(int i = 1) : o_id(benchx::kOrdPerDist + i), no_o_id(1), h_id(i + 1) {}
+    BenchXIds(int i = 1) : o_id(benchx::kOrdPerDist + i), no_o_id(benchx::kOrdPerDist - 900 + i), h_id(i + 1) {}
     int o_id;
     int no_o_id;
     int h_id;

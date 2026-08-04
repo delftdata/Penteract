@@ -1,0 +1,5 @@
+suite,status,results_csv
+singleregion_consistency,passed,acid_results/singleregion_consistency_results.csv
+singleregion_isolation,passed,acid_results/singleregion_isolation_results.csv
+multiregion_consistency,passed,acid_results/multiregion_consistency_results.csv
+multiregion_isolation,passed,acid_results/multiregion_isolation_results.csv

@@ -159,7 +159,7 @@ class PartitionedBenchXDataLoader {
                       MakeFixedTextScalar<10>(random_short_string),
                       MakeFixedTextScalar<71>(random_long_string),
                       MakeInt32Scalar(random_tax),
-                      MakeInt64Scalar(300000),
+                      MakeInt64Scalar(30000),
                       MakeInt32Scalar(3001)});
       // clang-format on
       // Create a string representation for the new row
@@ -169,7 +169,7 @@ class PartitionedBenchXDataLoader {
                 .append(random_short_string).append(";")
                 .append(random_long_string).append(";")
                 .append(std::to_string(random_tax)).append(";")
-                .append(std::to_string(300000)).append(";")
+                .append(std::to_string(30000)).append(";")
                 .append(std::to_string(3001)).append(";");
       // Analytically calculate the size of txn_string for the memory footprint
       int cur_row_char_bytes = row_string.capacity();   // allocated chars (includes unused)
@@ -197,7 +197,7 @@ class PartitionedBenchXDataLoader {
                         MakeFixedTextScalar<10>(random_short_string),
                         MakeFixedTextScalar<71>(random_long_string),
                         MakeInt32Scalar(random_tax),
-                        MakeInt64Scalar(300000000)});
+                        MakeInt64Scalar(300000)});
       // clang-format on
       // Create a string representation for the new row
       std::string row_string;
@@ -205,7 +205,7 @@ class PartitionedBenchXDataLoader {
                 .append(random_short_string).append(";")
                 .append(random_long_string).append(";")
                 .append(std::to_string(random_tax)).append(";")
-                .append(std::to_string(300000000)).append(";");
+                .append(std::to_string(300000)).append(";");
       // Analytically calculate the size of txn_string for the memory footprint
       int cur_row_char_bytes = row_string.capacity();   // allocated chars (includes unused)
       int string_overhead = sizeof(std::string);        // object overhead (on stack)
@@ -243,7 +243,7 @@ class PartitionedBenchXDataLoader {
                            MakeFixedTextScalar<34>(string_34), MakeFixedTextScalar<71>(string_71),
                            MakeFixedTextScalar<16>(string_16), MakeInt64Scalar(1234567890),
                            MakeFixedTextScalar<2>(random_credit), MakeInt64Scalar(50000),
-                           MakeInt32Scalar(random_discount), MakeInt64Scalar(-10), MakeInt64Scalar(100),
+                           MakeInt32Scalar(random_discount), MakeInt64Scalar(-10), MakeInt64Scalar(10),
                            MakeInt16Scalar(1), MakeInt16Scalar(0), MakeFixedTextScalar<250>(string_250)});
           customer_by_name.Insert({MakeInt32Scalar(w_id), MakeInt8Scalar(d_id), MakeFixedTextScalar<34>(string_34), MakeInt32Scalar(id)});
           // Create a string representation for the new row
@@ -257,7 +257,7 @@ class PartitionedBenchXDataLoader {
                     .append(std::to_string(1234567890)).append(";")
                     .append(std::to_string(random_discount)).append(";")
                     .append(std::to_string(-10)).append(";")
-                    .append(std::to_string(100)).append(";")
+                    .append(std::to_string(10)).append(";")
                     .append(std::to_string(1)).append(";")
                     .append(std::to_string(0)).append(";")
                     .append(string_250).append(";");
@@ -277,7 +277,7 @@ class PartitionedBenchXDataLoader {
                           MakeInt8Scalar(d_id),
                           MakeInt32Scalar(w_id),
                           MakeInt64Scalar(1234567890),
-                          MakeInt32Scalar(100),
+                          MakeInt32Scalar(10),
                           MakeFixedTextScalar<24>(string_24)});
           // clang-format on
           // Create a string representation for the new row
@@ -289,7 +289,7 @@ class PartitionedBenchXDataLoader {
                     .append(std::to_string(d_id)).append(";")
                     .append(std::to_string(w_id)).append(";")
                     .append(std::to_string(1234567890)).append(";")
-                    .append(std::to_string(100)).append(";")
+                    .append(std::to_string(10)).append(";")
                     .append(string_24).append(";");
           // Analytically calculate the size of txn_string for the memory footprint
           cur_row_char_bytes = row_string.capacity();   // allocated chars (includes unused)
@@ -306,6 +306,7 @@ class PartitionedBenchXDataLoader {
     Table<OrderSchema> order(storage_adapter_);
     Table<NewOrderSchema> new_order(storage_adapter_);
     Table<OrderLineSchema> order_line(storage_adapter_);
+    Table<CustomerSchema> customer(storage_adapter_);
 
     std::uniform_int_distribution<> carrier_id_rnd(1, 10);
     std::uniform_int_distribution<> item_rnd(1, kMaxItems);
@@ -319,15 +320,17 @@ class PartitionedBenchXDataLoader {
         std::vector<int> cust_id(kCustPerDist);
         std::iota(cust_id.begin(), cust_id.end(), 1);
         std::shuffle(cust_id.begin(), cust_id.end(), rg_);
+        std::unordered_map<int, int16_t> delivery_count;
         for (int id = 1; id <= kOrdPerDist; id++) {
           auto random_carrier_id = carrier_id_rnd(rg_);
+          bool is_delivered = id <= 2100;
           // clang-format off
           order.Insert({MakeInt32Scalar(w_id),
                         MakeInt8Scalar(d_id),
                         MakeInt32Scalar(id),
                         MakeInt32Scalar(cust_id[id - 1]),
                         MakeInt64Scalar(1234567890),
-                        MakeInt8Scalar(id > 2100 ? 0 : random_carrier_id),
+                        MakeInt8Scalar(is_delivered ? random_carrier_id : 0),
                         MakeInt8Scalar(kLinePerOrder),
                         MakeInt8Scalar(1)});
           // clang-format on
@@ -338,7 +341,7 @@ class PartitionedBenchXDataLoader {
                     .append(std::to_string(id)).append(";")
                     .append(std::to_string(cust_id[id - 1])).append(";")
                     .append(std::to_string(1234567890)).append(";")
-                    .append(std::to_string(id > 2100 ? 0 : random_carrier_id)).append(";")
+                    .append(std::to_string(is_delivered ? random_carrier_id : 0)).append(";")
                     .append(std::to_string(kLinePerOrder)).append(";")
                     .append(std::to_string(1)).append(";");
           // Analytically calculate the size of txn_string for the memory footprint
@@ -348,7 +351,11 @@ class PartitionedBenchXDataLoader {
           
           total_order_size += cur_row_total_bytes;
 
-          if (id > 2100) {
+          if (is_delivered) {
+            delivery_count[cust_id[id - 1]]++;
+          }
+
+          if (!is_delivered) {
             new_order.Insert({MakeInt32Scalar(w_id),
                               MakeInt8Scalar(d_id),
                               MakeInt32Scalar(id),
@@ -377,7 +384,7 @@ class PartitionedBenchXDataLoader {
                               MakeInt8Scalar(ol_id),
                               MakeInt32Scalar(random_item),
                               MakeInt32Scalar(w_id),
-                              MakeInt64Scalar(id > 2100 ? 0 : 1234567890),
+                              MakeInt64Scalar(is_delivered ? 1234567890 : 0),
                               MakeInt8Scalar(5),
                               MakeInt32Scalar(0),
                               MakeFixedTextScalar<24>(string_24)});
@@ -390,7 +397,7 @@ class PartitionedBenchXDataLoader {
                       .append(std::to_string(ol_id)).append(";")
                       .append(std::to_string(random_item)).append(";")
                       .append(std::to_string(w_id)).append(";")
-                      .append(std::to_string(id > 2100 ? 0 : 1234567890)).append(";")
+                      .append(std::to_string(is_delivered ? 1234567890 : 0)).append(";")
                       .append(std::to_string(5)).append(";")
                       .append(std::to_string(0)).append(";")
                       .append(string_24).append(";");
@@ -402,6 +409,12 @@ class PartitionedBenchXDataLoader {
             total_order_line_size += cur_row_total_bytes;
 
           }
+        }
+
+        for (auto& [c_id, cnt] : delivery_count) {
+          customer.Update({MakeInt32Scalar(w_id), MakeInt8Scalar(d_id), MakeInt32Scalar(c_id)},
+                          {CustomerSchema::Column::DELIVERY_CNT},
+                          {MakeInt16Scalar(cnt)});
         }
       }
     }

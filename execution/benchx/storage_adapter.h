@@ -17,6 +17,7 @@ class StorageAdapter {
   // Returns true if key exists before updating
   virtual bool Update(const std::string& key, std::function<void(std::string&)>&& update_fn) = 0;
   virtual bool Delete(std::string&& key) = 0;
+  virtual std::vector<std::pair<std::string, std::string>> ScanPrefix(const std::string& prefix) { return {}; }
 };
 
 using StorageAdapterPtr = std::shared_ptr<StorageAdapter>;
@@ -28,10 +29,9 @@ class KVStorageAdapter : public StorageAdapter {
   // This Read method is leaky. Only used for testing
   const std::string* Read(const std::string&) override;
   bool Insert(const std::string& key, std::string&& value) override;
-  bool Update(const std::string&, std::function<void(std::string&)>&&) override {
-    throw std::runtime_error("Update is unimplemented in KVStorageAdapter");
-  }
+  bool Update(const std::string&, std::function<void(std::string&)>&&) override;
   bool Delete(std::string&&) override { throw std::runtime_error("Delete is unimplemented in KVStorageAdapter"); }
+  std::vector<std::pair<std::string, std::string>> ScanPrefix(const std::string& prefix) override;
 
  private:
   std::shared_ptr<Storage> storage_;

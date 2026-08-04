@@ -147,6 +147,16 @@ Configuration::Configuration(const internal::Configuration& config, const string
         << "SmallBankpartitioning can only be paired with SmallBank execution type";
   }
 
+  if (config_.execution_type() == internal::ExecutionType::WRITE_SKEW) {
+    CHECK(config_.has_write_skew_partitioning())
+        << "WriteSkew execution type requires write_skew_partitioning";
+  }
+
+  if (config_.has_write_skew_partitioning()) {
+    CHECK(config_.execution_type() == internal::ExecutionType::WRITE_SKEW)
+        << "write_skew_partitioning can only be paired with WRITE_SKEW execution type";
+  }
+
   if (config_.replication_order_size() > local_region_) {
     auto order_str = Split(config_.replication_order(local_region_), ",");
     for (auto rstr : order_str) {
